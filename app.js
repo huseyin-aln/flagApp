@@ -85,4 +85,4 @@ const getAllCountries = async () => {
     }
 };
 
-getAllCountries()
+getAllCountries();
