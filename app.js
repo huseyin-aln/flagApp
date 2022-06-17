@@ -12,8 +12,9 @@ const getAllCountries = async () => {
         countrySelect.innerHTML += `<option class=countryName>${country.name.common}</option>`
       });
 
-      const input = document.querySelector(".input").onchange = () => {
-        fetchCountry(this.value.toLowercase());
+      const selectedItem = document.querySelector("select");
+      selectedItem.onchange = () => {
+        fetchCountry(selectedItem.value.toLowerCase());
       };  
 
     const fetchCountry = async (name) => {
