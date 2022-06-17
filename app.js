@@ -15,8 +15,8 @@ const getAllCountries = async () => {
       const selectedItem = document.querySelector("select");
       selectedItem.onchange = () => {
         fetchCountry(selectedItem.value.toLowerCase());
-      };  
-
+      }; 
+      
     const fetchCountry = async (name) => {
         const url = `https://restcountries.com/v3.1/name/${name}`;
         try {
@@ -54,10 +54,10 @@ const getAllCountries = async () => {
           currencies,
         } = country;
       
-        console.log(capital, common, region, svg);
-        console.log(Object.values(languages));
-        console.log(Object.values(currencies)[0].name);
-        console.log(Object.values(currencies)[0].symbol);
+        // console.log(capital, common, region, svg);
+        // console.log(Object.values(languages));
+        // console.log(Object.values(currencies)[0].name);
+        // console.log(Object.values(currencies)[0].symbol);
       
         countriesDiv.innerHTML += `
         <div class="card shadow-lg" style="width: 18rem;">
@@ -77,11 +77,12 @@ const getAllCountries = async () => {
           </ul>
         </div>
         `;
+
     };
      
     } catch (error) {
-        
+        console.log(error);
     }
 };
 
-getAllCountries();
+getAllCountries()
