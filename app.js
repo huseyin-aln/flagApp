@@ -7,9 +7,16 @@ const getAllCountries = async () => {
             throw new Error();
       }
       const data = await res.json();
+
+      let countryArr = [];
+      data.forEach((e) => {
+        const {common} = e.name;
+        countryArr.push(common);
+      });
+
       const countrySelect = document.querySelector(".country");
-      await data.forEach((country) => {
-        countrySelect.innerHTML += `<option class=countryName>${country.name.common}</option>`
+      await countryArr.sort().forEach((country) => {
+        countrySelect.innerHTML += `<option class=countryName>${country}</option>`
       });
 
       const selectedItem = document.querySelector("select");
