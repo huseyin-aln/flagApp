@@ -60,8 +60,8 @@ const getAllCountries = async () => {
         // console.log(Object.values(currencies)[0].symbol);
       
         countriesDiv.innerHTML += `
-        <div class="card shadow-lg" style="width: 18rem;">
-          <img src="${svg}" class="card-img-top" alt="...">
+        <div class="card shadow-lg"  >
+          <img src="${svg}" class="card-img-top" alt="img-top" >
           <div class="card-body">
             <h5 class="card-title">${common}</h5>
             <p class="card-text">${region}</p>

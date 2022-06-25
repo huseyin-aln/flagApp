@@ -1,7 +1,14 @@
 body {
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 0.8rem;
-    height: 100vh;
-    background: linear-gradient(to top left, #2e619c, #c0ceee);
-  }
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  height: 100vh;
+  background: linear-gradient(to top left, #2e619c, #c0ceee);
+}
+/* .card{
+  max-height: 25vh;
+} */
+.card-img-top {
+  max-height: 10rem;
+  width: 15rem;
+}
